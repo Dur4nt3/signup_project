@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Sign-Up</title>
+</head>
+<body>
+    <header class="header-cont">
+        <h1 class="header-text">Sign-Up Inc.</h1>
+        <ul class="links-list">
+            <li><a href="https://github.com/Dur4nt3/signup_project" rel="noopener noreferrer" target="_blank">Git</a></li>
+            <li>|</li>
+            <li><a href="https://github.com/Dur4nt3/signup_project" rel="noopener noreferrer" target="_blank">Hub</a></li>
+            <li>|</li>
+            <li><a href="https://github.com/Dur4nt3/signup_project" rel="noopener noreferrer" target="_blank">Link</a></li>
+        </ul>
+    </header>
+
+
+    <div class="form-wrapper">
+
+        <form action="https://httpbin.org/post" method="post" class="form-cont">
+            <h2 class="form-header">Sign Up</h2>
+
+            <div class="form-row">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="hide error email-error">Invalid Email Address</span>
+            </div>
+
+            <div class="form-row">
+                <label for="password">Password</label>
+                <span class="password-wrapper">
+                    <input type="password" id="password" name="password" maxlength="25" required>
+                    <img src="./images/View.svg" alt="View password" class="view-hide-pass open" title="View Password">
+                    <img src="./images/Hide.svg" alt="Hide password" class="view-hide-pass hide close" title="Hide Password">
+                </span>
+                <div class="validation-info hide">
+                    <p class="validation-header-invalid error">Your password is too WEAK!</p>
+                    <p class="validation-header-valid ok hide">Your password is STRONG!</p>
+                    <p class="validation-header-info error">Ensure to include the following in your password:</p>
+                    <ul class="validation-list">
+                        <li class="invalid">Password must be at least 10 characters long</li>
+                        <li class="valid hide">Password must be at least 10 characters long</li>
+                        <li class="invalid">Password must include at least 1 digit</li>
+                        <li class="valid hide">Password must include at least 1 digit</li>
+                        <li class="invalid">Password must include at least 1 uppercase letter</li>
+                        <li class="valid hide">Password must include at least 1 uppercase letter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="conf-password">Confirm Password</label>
+                <span class="password-wrapper">
+                    <input type="password" id="conf-password" name="conf-password" maxlength="25" required>
+                    <img src="./images/View.svg" alt="View password" class="view-hide-pass open" title="View Password">
+                    <img src="./images/Hide.svg" alt="Hide password" class="view-hide-pass hide close" title="Hide Password">
+                </span>
+                <span class="hide error password-error">Passwords Not Matching</span>
+            </div>
+
+            <button type="submit" class="form-button">Sign-Up</button>
+        </form>
+    </div>
+
+    <footer class="footer-cont">
+        <p class="footer-text">Project by <a href="https://github.com/Dur4nt3/signup_project" rel="noopener noreferrer" target="_blank">Dur4nt3</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Inter;
+    src: url(./fonts/Inter-Regular.woff2);
+}
+
+:root {
+    --main-text-color: #dd89ff;
+    --form-text-color: white;
+    --glass-background-color: rgba(241,241,255,0.5);
+    --glass-border: 1px solid rgba(241,241,255,0.25);
+}
+
+body {
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+
+    font-family: Inter, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    background-image: url(./images/Rain-LightBlue-LightPink.svg);
+    color: var(--main-text-color);
+}
+
+.header-cont {
+    display: flex;
+    height: 6rem;
+    align-items: center;
+}
+
+.header-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+.links-list {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.links-list > li {
+    list-style-type: none;
+}
+
+.links-list a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.links-list a:hover {
+    color: #f03fff;
+}
+
+.form-wrapper {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-cont {
+    padding: 1.5rem;
+
+    background: var(--glass-background-color);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: var(--glass-border);
+
+    border-radius: 1rem;
+
+    color: var(--form-text-color);
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.form-row input {
+    caret-color: white;
+    color: white;
+    width: 18rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(254,238,255,0.25);
+    outline: none;
+}
+
+.form-row input:focus {
+    border-bottom: 3px solid #fbf1ff;
+}
+
+.error {
+    font-size: 0.80rem;
+    color: #9e0000;
+    margin-top: 0.3rem;
+}
+
+.ok {
+    font-size: 0.80rem;
+    color: #51ff00;
+    margin-top: 0.3rem;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.view-hide-pass {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.validation-list {
+    padding-left: 1.5rem;
+}
+
+.validation-list > li {
+    font-size: 0.75rem;
+}
+
+.invalid {
+    list-style-image: url(./images/red-x.svg);
+    color: #9e0000;
+}
+
+.valid {
+    list-style-image: url(./images/check-mark.svg);
+    color: #51ff00;
+}
+
+.form-button {
+    cursor: pointer;
+    width: 100%;
+
+    background-color: #00f9ff;
+    background-image: linear-gradient(199deg, #00f9ff 0%, #f03fff 100%);
+
+    outline: none;
+    color: var(--form-text-color);
+
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+
+    transition-duration: 0.7s;
+}
+
+.form-button:hover {
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+}
+
+.form-button:active {
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+
+.error-background {
+    background: linear-gradient(to right, #870000, #190a05);
+}
+
+.error-background:hover {
+    background: linear-gradient(to right, #870000, #190a05);
+}
+
+.error-background:active {
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+
+.footer-cont > p {
+    text-align: center;
+}
+
+.footer-cont a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.footer-cont a:hover {
+    color: #f03fff;
+}
